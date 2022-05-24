@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>EsteticaSpa - Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="grid-area-conteiner">
+        <header id="header">
+            <figure class="header__Logo">
+                <img src="img/logo1_larg.png" alt="Logo" title="Logo">
+            </figure>
+            <nav class="header__nav">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="tratamientos.html">Tratamientos</a>
+                    </li>
+                    <li>
+                        <a href="empresa.html">Empresa</a>
+                    </li>
+                    <li>
+                        <a href="reservas.html">Reservas</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>                
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="main__portada PortadasEff">
+                <div></div>
+                <article class="main__portada_text">
+                <h1>Date el gusto de sentirte mejor!</h1>
+                <h3>Haz tu reserva ahora</h3>
+                <!--<button>Reserve</button>-->
+                </article>
+            </section>
+            <section class="mSection__uno">
+                <div class="mSection__uno_container">        
+                    <div class="mSection__uno_container_uno">
+                        <figure>
+                            <img src="img/loc.png" alt="Unicacion" title="Unicacion">
+                        </figure>
+                        <h3>De Colonia, para todo el pais</h3>
+                        <p>A un paso del prestigioso Paseo de Gracia. En nuestras instalaciones disfrutarás de los mejores productos de belleza orgánicos, magníficas profesionales y un ambiente exquisito para crear una experiencia única e inolvidable.</p>
+                    </div>
+                    <div class="mSection__uno_container_dos">
+                        <figure>
+                            <img src="img/cora.png" alt="Atencion" title="Atencion">
+                        </figure>
+                        <h3>Con la mejor atención</h3>
+                        <p>Le ofrecemos una selección exclusiva de terapias corporales y tratamientos de belleza faciales y corporales para proporcionarle salud, bienestar, vitalidad y energía.</p>
+                    </div>
+                    <div class="mSection__uno_container_tres">
+                        <figure>
+                            <img src="img/prof.png" alt="Profesionales" title="Profesionales">
+                        </figure>
+                        <h3>Atención profesional</h3>
+                        <p>Extraordinarios profesionales formados en las mejores escuelas y que cuentan con los últimos conocimientos y todos los avances en técnicas y tratamientos de belleza. Ellos son nuestra mejor carta de presentación.</p>
+                    </div>
+                </div>            
+            </section>
+            <section class="mSection__dos">
+                <!--Seccion de pestañas -->
+                <div class="mSection__dos_container">
+                    <h2>Servicios</h2>
+                    <div class="pestañas">
+                        <button class="tabLinks" onclick="openTab(event, 'tratamientoFacial')">Tratamientos Faciales </button>
+                        <button class="tabLinks" onclick="openTab(event, 'tatamientoCordporal')">Tratamientos Corporales</button>
+                        <button class="tabLinks" onclick="openTab(event, 'otrosTratamientos')">Otros Tratamientos</button>                    
+                    </div>
+                    <div id="tratamientoFacial" class="tabDatos">
+                        <h3>Tratamientos Faciales</h3>
+                        <p>La piel del rostro está expuesta constantemente a los cambios de clima, el sol o la polución requiriendo de la debida atención para que se mantenga siempre radiante.</p>
+                    </div>
+
+                    <div id="tatamientoCordporal" class="tabDatos">
+                        <h3>Tratamientos Corporales
+                            </h3>
+                        <p>Lipo-Reductor sin cirugía, Celulitis, Tonificación y Levantamiento de Glúteos, Tratamientos de Tonificación, Flacidez, Post Operatorio, Carboxiterapia, Vacum Terapia.</p> 
+                    </div>
+
+                    <div id="otrosTratamientos" class="tabDatos">
+                        <h3>Otros Tratamientos</h3>
+                        <p>Contamos con los siguientes tratamientos: Botox, Relleno de Ácido Hialurónico, Plasma Rico en Plaquetas, Vitamina C Endovenosa.</p>
+                    </div>
+                </div>
+            </section>        
+        </main>
+        <footer id="footer">
+            <section class="fSection">
+                <figure class="fSection__uno">
+                    <img src="img/logo_foot2.png" alt="logo_foot" title="logo_foot">
+                </figure>
+                <div class="fSection__dos">
+                    <h2>No te lo pierdas...</h2>
+                    <p>Ven a visitar nuestro Spa en Barcelona y disfruta de los mejores masajes y tratamientos de belleza. A pocos metros del Paseo de Gracia disponemos de 6 cabinas únicas para disfrutar del relax y bienestar de un masaje o ritual, sólo o en pareja, o un tratamiento de Regenerador tratimiento de belleza.</p>
+                    <div class="fRedes">
+                        <ul>
+                            <li>
+                                <a href=""><img  class="redSocial redSocial_F" src="./img/facebook.png" alt="Siguenos en Facebook." title="Siguenos en Facebook."/></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="redSocial redSocial_I" src="./img/instagram.png" alt="Siguenos en Instagram." title="Siguenos en Instagram."/></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="redSocial redSocial_T" src="./img/twiter.png" alt="Siguenos en Twiter." title="Siguenos en Twiter."/></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="fSection__tres">
+                    <ul>
+                        <li>
+                            <h3>Sitio</h3>
+                        </li>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="tratamientos.html">Tratamientos</a>
+                        </li>
+                        <li>
+                            <a href="empresa.html">Empresa</a>
+                        </li>
+                        <li>
+                            <a href="reservas.html">Reservas</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                <!-- <div class="fRedes">
+                        <ul>
+                            <li>
+                                <a href=""><img  class="redSocial redSocial_F" src="./img/facebook_16.png" alt="Siguenos en Facebook." title="Siguenos en Facebook."/></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="redSocial redSocial_I" src="./img/instagram.png" alt="Siguenos en Instagram." title="Siguenos en Instagram."/></a>
+                            </li>
+                            <li>
+                                <a href=""><img class="redSocial redSocial_T" src="./img/twiter.png" alt="Siguenos en Twiter." title="Siguenos en Twiter."/></a>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+                
+            </section>
+            <script>
+                function openTab(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabDatos");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tabLinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+                }
+                </script>
+        </footer>
+    </div>    
+</body>
+</html>
