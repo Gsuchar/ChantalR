@@ -8,7 +8,9 @@
     <title>EsteticaSpa - Inicio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
 </head>
 <body>
     <div class="grid-area-conteiner">
@@ -47,21 +49,21 @@
             </section>
             <section class="mSection__uno">
                 <div class="mSection__uno_container">        
-                    <div class="mSection__uno_container_uno">
+                    <div class="mSection__uno_container_uno" data-aos="fade-right">
                         <figure>
                             <img src="img/loc.png" alt="Unicacion" title="Unicacion">
                         </figure>
                         <h3>De Colonia, para todo el pais</h3>
                         <p>A un paso del prestigioso Paseo de Gracia. En nuestras instalaciones disfrutarás de los mejores productos de belleza orgánicos, magníficas profesionales y un ambiente exquisito para crear una experiencia única e inolvidable.</p>
                     </div>
-                    <div class="mSection__uno_container_dos">
+                    <div class="mSection__uno_container_dos" data-aos="fade-up">
                         <figure>
                             <img src="img/cora.png" alt="Atencion" title="Atencion">
                         </figure>
                         <h3>Con la mejor atención</h3>
                         <p>Le ofrecemos una selección exclusiva de terapias corporales y tratamientos de belleza faciales y corporales para proporcionarle salud, bienestar, vitalidad y energía.</p>
                     </div>
-                    <div class="mSection__uno_container_tres">
+                    <div class="mSection__uno_container_tres" data-aos="fade-left">
                         <figure>
                             <img src="img/prof.png" alt="Profesionales" title="Profesionales">
                         </figure>
@@ -158,7 +160,7 @@
                 
             </section>
             <script>
-                function openTab(evt, cityName) {
+                function openTab(evt, tabText) {
                 var i, tabcontent, tablinks;
                 tabcontent = document.getElementsByClassName("tabDatos");
                 for (i = 0; i < tabcontent.length; i++) {
@@ -168,9 +170,12 @@
                 for (i = 0; i < tablinks.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace(" active", "");
                 }
-                document.getElementById(cityName).style.display = "block";
+                document.getElementById(tabText).style.display = "block";
                 evt.currentTarget.className += " active";
                 }
+                </script>
+                <script>
+                    AOS.init();
                 </script>
         </footer>
     </div>    
