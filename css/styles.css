@@ -17,7 +17,7 @@ body{
         overflow-x: hidden;
     }
 /*********** HEADER MediaQuerys ***********/
-    #header{
+    /*#header{
         flex-flow: column wrap;
         max-height: 100%;        
         padding: 10px;
@@ -30,7 +30,7 @@ body{
     #header .header__nav ul{
         font-size: 12px;
         margin-top: 2%;
-    }
+    }*/
 /*Header MediaQuerys FIN*/
 /*---------------------------------------------------------------*/    
 /*********** MAINs MediaQuerys ***********/
@@ -151,12 +151,73 @@ body{
     
 }
 /*FIN GRID-AREA*/
+/* BOOSTRAP HEADER_NAV Inicio*/
+#header .header__Logo {
+    max-height: 150px;
+}
+#header .header__Logo img{
+    height: 85px;
+    object-fit: cover;
+}
+
+#header .header__nav {
+    
+    background-image: url("../img/gplaypattern.png");
+    border-bottom: goldenrod solid 3px;
+    padding-bottom: 0px;
+    z-index: 99999;
+}
+.offcanvas-header {
+    border-bottom: goldenrod solid 3px;
+}
+#offcanvasNavbar{
+    background-image: url("../img/gplaypattern.png");
+    
+    
+}
+.offcanvas-body{
+    padding: 0% !important;
+    
+    
+}
+.offcanvas-body ul li{
+    padding: 0rem 1rem;
+    
+    
+}
+.offcanvas-body ul li a{
+   
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: 500;
+    
+}
+.offcanvas-body a:hover{
+    color: goldenrod;
+    text-decoration: none;
+    border-bottom: 5px solid goldenrod;    
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#header .header__nav_container{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    
+    
+}
+.navbar-light .navbar-toggler{
+    
+    color: goldenrod !important;
+    border-color: goldenrod !important;
+    border: 2.5px solid goldenrod;
+}
+/* BOOSTRAP HEADER_NAV FIN*/
 
 /******** HEADER ********/
-header{
-    /*background-image: url("../img/xv.png");*/
+/*header{
+    
     background-image: url("../img/gplaypattern.png");
-    /*background: whitesmoke;*/
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -200,7 +261,7 @@ header{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     animation: fadeEffect 0.6s;
-}
+}*/
 /* HEADER-FIN*/
 /*====================================================================================================================*/
 /******** MAINs ********/
