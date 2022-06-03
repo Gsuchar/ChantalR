@@ -152,21 +152,16 @@ body{
 }
 /*FIN GRID-AREA*/
 /* BOOSTRAP HEADER_NAV Inicio*/
-#header .header__Logo {
-    max-height: 150px;
-}
-#header .header__Logo img{
-    height: 85px;
-    object-fit: cover;
-}
 
-#header .header__nav {
+
+
+/*#header .header__nav {
     
     background-image: url("../img/gplaypattern.png");
     border-bottom: goldenrod solid 3px;
     padding-bottom: 0px;
     z-index: 99999;
-}
+}*/
 .offcanvas-header {
     border-bottom: goldenrod solid 3px;
 }
@@ -214,35 +209,39 @@ body{
 /* BOOSTRAP HEADER_NAV FIN*/
 
 /******** HEADER ********/
-/*header{
+header{
     
     background-image: url("../img/gplaypattern.png");
     
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    padding: 20px 20px 10px 20px;    
+    /*padding: 20px 20px 10px 20px;*/    
     align-items: center;
-    position: sticky;
+    /*position: sticky;
     top: 0;
-    max-height: 100px;
+    z-index: 99999;*/
+    min-height: 100px;
     border-bottom: goldenrod solid 3px;
-    z-index: 99999;
+    
     grid-area: header;
 }
 #header .header__Logo {
-    max-height: 150px;
+    
+    margin-bottom: 5px;
 }
 #header .header__Logo img{
-    height: 85px;
-    object-fit: cover;
+    height: 75px;
+    
 }
+
 .header__nav{
     align-self: flex-end; 
 }
 #header .header__nav ul {
     list-style: none;
     display: flex;
+    margin-bottom: 0.5rem;
 }
 
 #header .header__nav ul li a {
@@ -261,7 +260,7 @@ body{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     animation: fadeEffect 0.6s;
-}*/
+}
 /* HEADER-FIN*/
 /*====================================================================================================================*/
 /******** MAINs ********/
@@ -341,7 +340,7 @@ main{
     display: flex;
     flex-wrap: nowrap;
     /*width: 1080px;*/
-    width: 70%;
+    width: 80%;
     
 }
 .mSection__uno_container_uno, .mSection__uno_container_dos, .mSection__uno_container_tres {
