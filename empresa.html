@@ -8,7 +8,7 @@
     <title>EsteticaSpa - Empresa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet">
     <!--Animaciones-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -18,8 +18,9 @@
 </head>
 <body>
     <div class="grid-area-conteiner">
-        <header id="header">
-            <nav class="navbar navbar-light fixed-top header__nav">
+        <header id="header" class="fixed-top">
+            <!--Nav mobile-->
+            <nav class="navbar navbar-light fixed-top header__nav d-lg-none">
                 <div class="container-fluid header__nav_container">
                     <a class="navbar-brand" href="#">
                         <figure class="header__Logo ">
@@ -39,13 +40,13 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="tratamientos.html">Tratamientos</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"  href="empresa.html">Empresa</a>
+                            <a class="nav-link" href="empresa.html">Empresa</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="reservas.html">Reservas</a>
@@ -57,12 +58,13 @@
                     </div>
                   </div>
                 </div>
-              </nav>      
-            
-            <!--    <figure class="header__Logo">
+            </nav>      
+            <!--Nav mobile fin-->
+            <!--Nav escritorio-->
+            <figure class="header__Logo d-none d-lg-block">
                 <img src="img/logo1_larg.png" alt="Logo" title="Logo">
             </figure>
-            <nav class="header__nav">
+            <nav class="header__nav d-none d-lg-block">
                 <ul>
                     <li>
                         <a href="index.html">Inicio</a>
@@ -80,7 +82,8 @@
                         <a href="contacto.html">Contacto</a>
                     </li>                
                 </ul>
-            </nav>-->
+            </nav>
+            <!--Nav escritorio-->
         </header>
         <main id="mEmpresa">
             <section class="mEmpresa__Portada PortadasEff">
@@ -88,20 +91,20 @@
             </section>
             <section class="mEmpresa__Articles_container">
                 <article class="mEmpresa__Articles_uno">
-                    <figure>
+                    <figure data-aos="zoom-in-right">
                         <img src="./img/img.png" alt="">
-                    </figure>
-                    <div>
+                    </figure zoom-in-left>
+                    <div data-aos="zoom-in-left">
                         <h2>¿Quienes somos?</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo mollitia praesentium iste! Quas ullam delectus, neque ad numquam voluptates officia accusamus eveniet doloremque! Sunt incidunt necessitatibus odit sint commodi libero.</p>
                     </div>    
                 </article>        
                 <article class="mEmpresa__Articles_dos">            
-                    <div>
+                    <div data-aos="zoom-in-right">
                         <h2>Mision</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo mollitia praesentium iste! Quas ullam delectus, neque ad numquam voluptates officia accusamus eveniet doloremque! Sunt incidunt necessitatibus odit sint commodi libero.</p>
                     </div>
-                    <figure>
+                    <figure data-aos="zoom-in-left">
                         <img src="./img/img.png" alt="">
                     </figure>    
                 </article>
@@ -166,6 +169,9 @@
                 </div>
                 
             </section>
+            <script>
+                AOS.init();
+            </script>
         </footer>
     </div>    
 </body>

@@ -8,7 +8,7 @@
     <title>EsteticaSpa - Contacto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Dosis:wght@200&family=Encode+Sans+SC:wght@500&family=Mukta:wght@300&family=Ruda:wght@500&family=Sansita+Swashed&display=swap" rel="stylesheet">
     <!--Animaciones-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -18,8 +18,9 @@
 </head>
 <body>
     <div class="grid-area-conteiner">
-        <header id="header">
-            <nav class="navbar navbar-light fixed-top header__nav">
+        <header id="header" class="fixed-top">
+            <!--Nav mobile-->
+            <nav class="navbar navbar-light fixed-top header__nav d-lg-none">
                 <div class="container-fluid header__nav_container">
                     <a class="navbar-brand" href="#">
                         <figure class="header__Logo ">
@@ -39,7 +40,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
                             <a class="nav-link" href="tratamientos.html">Tratamientos</a>
@@ -51,18 +52,19 @@
                             <a class="nav-link" href="reservas.html">Reservas</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                             </li>
                         </ul>
                     </div>
                   </div>
                 </div>
-              </nav>      
-            
-            <!--    <figure class="header__Logo">
+            </nav>      
+            <!--Nav mobile fin-->
+            <!--Nav escritorio-->
+            <figure class="header__Logo d-none d-lg-block">
                 <img src="img/logo1_larg.png" alt="Logo" title="Logo">
             </figure>
-            <nav class="header__nav">
+            <nav class="header__nav d-none d-lg-block">
                 <ul>
                     <li>
                         <a href="index.html">Inicio</a>
@@ -80,7 +82,8 @@
                         <a href="contacto.html">Contacto</a>
                     </li>                
                 </ul>
-            </nav>-->
+            </nav>
+            <!--Nav escritorio-->
         </header>
         <main id="mContacto">
             <section class="mContacto__Portada PortadasEff">
@@ -92,7 +95,7 @@
                     <p>
                         No dudes en escribirnos por cualquier consulta o duda que tengas o si simplemente quieres darnos una recomendacion.
                     </p>
-                    <form action="" method="post" autocomplete="on" class="mContacto__Form-form">
+                    <form action="" method="post" autocomplete="on" class="mContacto__Form-form" data-aos="zoom-in-down">
                         <h5>* Campo Obligatorio</h5>
                         <label>(*)Nombre</label>
                         <input type="text" placeholder="Nombre" required>
@@ -164,6 +167,9 @@
                 </div>
                 
             </section>
+            <script>
+                AOS.init();
+            </script>
         </footer>
     </div>    
 </body>

@@ -36,7 +36,7 @@ body{
 /*********** MAINs MediaQuerys ***********/
 /*Index main*/ 
     .main__portada_text h1 {
-        padding-top: 50%;
+        padding-top: 40%;
         
     }
     .mSection__uno_container {
@@ -271,6 +271,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     grid-area: main;
+    
 
 }
 .PortadasEff div{/* Div efecto opaco en img de portadas*/
@@ -448,9 +449,11 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;   
+    height: 60vh;
+    margin-top: 100px;   
     opacity: 0.2 black;
     border-bottom: 3px solid goldenrod;
+    
 }
 .mContacto__Form{
     width: 60%;
@@ -527,9 +530,11 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;   
+    height: 60vh;
+    margin-top: 100px;   
     opacity: 0.2 black;
     border-bottom: 3px solid goldenrod;
+
 }
 
 /*TextArea RESERVAS FIN*/
@@ -560,7 +565,8 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;   
+    height: 60vh;
+    margin-top: 100px;   
     opacity: 0.2 black;
     border-bottom: 3px solid goldenrod;
 }
@@ -615,7 +621,8 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;   
+    height: 60vh;
+    margin-top: 100px;   
     opacity: 0.2 black;
     border-bottom: 3px solid goldenrod;
 }
