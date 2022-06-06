@@ -147,7 +147,7 @@ body{
         "header header"
         "main main"
         "footer footer";
-    width: 100%;
+    max-width: 100%;
     
 }
 /*FIN GRID-AREA*/
@@ -261,6 +261,13 @@ header{
     border-top-right-radius: 5px;
     animation: fadeEffect 0.6s;
 }
+.activo{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: goldenrod;
+    color: whitesmoke !important;
+}
+
 /* HEADER-FIN*/
 /*====================================================================================================================*/
 /******** MAINs ********/
