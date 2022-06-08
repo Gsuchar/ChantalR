@@ -1,0 +1,726 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-image: url("../img/xv.png");
+}
+/*====================================================================================================================*/
+/******** MediaQuerys ********/
+@media screen and (max-width: 767px) {
+    .grid-area-conteiner  {
+        max-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+/*---------------------------------------------------------------*/    
+/*********** MAINs MediaQuerys ***********/
+/*Index main*/ 
+.main__portada_text{
+    h1 {
+        padding-top: 40%;
+    }
+}
+.mSection__uno_container {
+    flex-flow: column nowrap;
+    min-width: 100%;      
+}
+.mSection__uno_container_uno, .mSection__uno_container_dos, .mSection__uno_container_tres{
+    min-width: 100%;
+    border:none !important;
+}
+#main .mSection__dos{
+    min-width: 95%;
+    :hover{
+        width: 100%;
+    }
+    :active{
+        color: antiquewhite;
+        width: 100%;
+    }
+}
+.pestañas{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    border: none !important;
+    margin-bottom: 3%;
+}
+/*Fin Index main*/
+/*Tratamientos main*/
+#mTratamientos .mTratamientos__container {
+    min-width: 95%;
+    article{
+        min-width: 100%;
+    }
+}
+#mTratamientos .mTratamientos__Articles_container{
+    flex-flow: column wrap;
+}
+/*Fin Tratamientos main*/
+/*Empresa main*/
+#mEmpresa .mEmpresa__Articles_container{
+    min-width: 95%;
+    img{
+        max-width: 100%;/*ajuste de max-width por contenedor desborde en mobile*/
+    }
+}
+#mEmpresa .mEmpresa__Articles_uno, #mEmpresa .mEmpresa__Articles_dos {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/*Fin Empresa main*/
+/*Contacto main*/
+.mContacto__Form{
+    min-width: 100%;
+}
+.mContacto__Form_container {
+    min-width: 95%;
+    margin: 0% 2.5%;/* 95% de ancho + 5% margin laterales*/
+}
+#mContacto .mContacto__Form-form{
+    min-width: 95%;
+}
+/*Fin Contacto main*/
+/*Reserva main*/
+
+/*Fin Reserva main*/
+/*MAINs MediaQuerys FIN*/
+/*---------------------------------------------------------------*/
+/*********** FOOTER MediaQuerys ***********/
+#footer .fSection {       
+    flex-direction: column;
+    min-width: 95%;
+}
+.fSection__uno, .fSection__dos{
+    min-width: 100%;        
+}
+.fSection__tres{
+    display: none;
+}
+.fSection__uno{
+    img{
+        padding: 0% 18%;
+        height: 100%;
+    }
+}
+/*Footer MediaQuerys FIN*/    
+/*---------------------------------------------------------------*/
+}
+/* MediaQuerys-FIN*/
+/*====================================================================================================================*/
+/* Css No Mobile*/
+/*GRID_AREA*/
+.grid-area-conteiner {
+    display: grid;   
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    max-width: 100%;    
+}
+/*FIN GRID-AREA*/
+/* BOOSTRAP HEADER_NAV*/
+.offcanvas-header {
+    border-bottom: goldenrod solid 3px;
+}
+#offcanvasNavbar{
+    background-image: url("../img/gplaypattern.png");
+}
+.offcanvas-body{
+    padding: 0% !important;
+    ul{
+        li{
+            padding: 0rem 1rem;
+            a{
+                font-family: 'Encode Sans SC', sans-serif;
+                font-weight: 500;
+                :hover{
+                    color: goldenrod;
+                    text-decoration: none;
+                    border-bottom: 5px solid goldenrod;    
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;    
+                }    
+            } 
+        }
+    }
+}
+#header .header__nav_container{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.navbar-light .navbar-toggler{
+    color: goldenrod !important;
+    border-color: goldenrod !important;
+    border: 2.5px solid goldenrod;
+}
+/* BOOSTRAP HEADER_NAV FIN*/
+/******** HEADER ********/
+header{    
+    background-image: url("../img/gplaypattern.png");
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    /*padding: 20px 20px 10px 20px;*/    
+    align-items: center;
+    /*position: sticky;
+    top: 0;
+    z-index: 99999;*/
+    min-height: 100px;
+    border-bottom: goldenrod solid 3px;
+    grid-area: header;
+}
+#header .header__Logo {
+    margin-bottom: 5px;
+    img{
+        height: 75px;    
+    }
+}
+#header .header__nav{
+    align-self: flex-end;
+    ul{
+        list-style: none;
+        display: flex;
+        margin-bottom: 0.5rem;
+        li{
+            a{
+                font-family: 'Encode Sans SC', sans-serif;
+                margin: 0 5px;
+                color: #1c1c1c;
+                text-decoration: none;
+                padding: 3px 3px 13px 3px;
+                opacity: 0.9;
+                :hover{
+                    background-color: goldenrod;
+                    color: whitesmoke;
+                    font-family: 'Encode Sans SC', sans-serif;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    animation: fadeEffect 0.6s;    
+                }    
+            }
+        }    
+    } 
+}
+.activo{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: goldenrod;
+    color: whitesmoke !important;
+}
+/* HEADER-FIN*/
+/*====================================================================================================================*/
+/******** MAINs ********/
+/*MAIN Index*/
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-area: main;    
+}
+.PortadasEff{
+    div{/* Div efecto opaco en img de portadas*/
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        z-index: 99999999;
+        opacity: 0.3;    
+    }
+}
+#main .main__portada{
+    width: 100%;
+    background-image: url("../img/Portada.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;   
+    opacity: 0.2 black;
+    border-bottom: 3px solid goldenrod;
+    img{
+        height: 100%;
+        border-bottom: 1px solid goldenrod;
+    }
+}
+.main__portada_text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 10px;
+    opacity: 0.4;
+    h1{
+        font-size: 5rem;
+        font-family: 'Ruda', sans-serif;
+    }
+}
+#main .mSection__uno{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;   
+    justify-content: center;
+    background-color: #e9e9e9;
+    img{
+        margin:25px;
+        opacity: 0.8;
+    }
+    h3{
+        font-family: 'Ruda', sans-serif;
+        border-bottom:  2px solid goldenrod;
+        padding-bottom: 1%;
+        opacity: 0.9;    
+    }
+    p{
+        padding: 10px 10px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;    
+    }   
+}
+.mSection__uno_container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80%;    
+}
+.mSection__uno_container_uno, .mSection__uno_container_dos, .mSection__uno_container_tres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    padding: 1% 0.5%;
+    height: 100%;
+    width: 33.33%;
+    border-right: 1px solid #e9e9e9 ;
+    border-bottom: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+    letter-spacing: 0.1rem;
+    :hover{
+        border-right: 1px solid goldenrod;
+        border-bottom: 1px solid goldenrod;
+        border-left: 1px solid goldenrod;
+    }    
+}
+.mSection__uno_container_dos{
+    background-color: #1c1c1c;
+    h3,p{
+        color: aliceblue;
+        opacity: 0.7;    
+    }
+    
+}
+#main .mSection__dos{
+/*defino ancho por el grid*/
+    max-width: 70%;
+    width: 60%;
+    button{
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        font-family: 'Acme', sans-serif;
+        opacity: 0.9;  
+        :hover{
+            background-color: goldenrod;
+        }
+        :active{
+            background-color: goldenrod;
+            color: whitesmoke;
+        }
+    }
+    h2{
+        margin: 2%;
+        font-size: 60px;
+        border-bottom: 1px solid goldenrod;
+        font-family: 'Sansita Swashed', cursive;
+        color: #1c1c1c;
+        opacity: 0.93;
+    }
+    h3{
+        border-bottom: 1px solid goldenrod;
+        padding: 5px;
+        width: 80%;
+        font-family: 'Ruda', sans-serif;    
+    }
+    p{
+        margin-top: 2%;
+        font-family: 'Mukta', sans-serif;
+        font-size: 20px;
+    }  
+}
+.mSection__dos_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 5% 0%;
+    border:  2px solid goldenrod;
+}
+.pestañas{
+    overflow: hidden;
+    border-bottom: 2px solid goldenrod;
+    margin: 2% 0%;
+    display: flex;
+    /*flex-flow: row nowrap;
+    background-color: #f1f1f1;*/
+    align-items: center;    
+}
+.tabDatos{
+    display: none;
+    width: 100%;
+    padding: 2% 4%;
+    animation: fadeEffect 1s;    
+  }
+/*MAIN Index FIN*/
+/*---------------------------------------------------------------*/
+/*MAIN Contacto*/
+#mContacto .mContacto__Portada{
+    width: 100%;
+    background-image: url("../img/contacto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    margin-top: 100px;   
+    opacity: 0.2 black;
+    border-bottom: 3px solid goldenrod;
+}
+.mContacto__Form{
+    width: 60%;
+}
+#mContacto .mContacto__Form_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 1%;
+    border-left: 2px solid goldenrod;    
+    border-right: 2px solid goldenrod;
+    h1{
+        margin: 2%;
+        font-size: 60px;
+        border-bottom: 1px solid goldenrod;
+        font-family: 'Sansita Swashed', cursive;
+        color: #1c1c1c;
+        opacity: 0.93;    
+    }
+    p{
+        margin: 2% 1%;
+        font-family: 'Mukta', sans-serif;
+        font-size: 20px;    
+    }    
+}
+/*-------------------------------------------*/
+/*Area RESERVAS*//* re utlice clases de contacto porque voy a borrar este html luego, solo es para entrega obligatoria*/
+#mContacto .mContacto__Form-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: stretch;
+    width: 80%;
+    padding: 3% 5%;
+    border: 1px solid goldenrod;
+    margin: 2% 1%;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    label{
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;
+        font-weight: bold;    
+    }
+    input, select{
+        height: 45px;
+        margin: 1% 0% 2% 0%;
+        border: 1px solid goldenrod;
+        :focus-visible{
+            border: 3px solid goldenrod ;
+            outline: none;     
+        }
+    }
+    textarea{/*Area RESERVAS*//* re utlice clases de contacto porque voy a borrar este html luego, solo es para entrega obligatoria*/
+        height: 100px;
+        margin: 1% 0% 2% 0%;
+        border: 1px solid goldenrod;
+        :focus-visible{
+            border: 3px solid goldenrod ;
+            outline: none;            
+        }        
+    }   
+}
+#mContacto .mReservas__Portada{
+    width: 100%;
+    background-image: url("../img/reserva.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    margin-top: 100px;   
+    opacity: 0.2 black;
+    border-bottom: 3px solid goldenrod;
+}
+/*TextArea RESERVAS FIN*/
+/*-------------------------------------------*/
+#mContacto .mContacto__Form-form input[type="submit" i]{
+    background-color: white;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+    :hover{
+        background-color: goldenrod;
+        color: white;
+        border: 1px dotted black;  
+    }
+}
+/*MAIN Contacto FIN*/
+/*---------------------------------------------------------------*/
+ /*MAIN Empresa*/
+ #mEmpresa .mEmpresa__Portada{
+    width: 100%;
+    background-image: url("../img/empresa.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    margin-top: 100px;   
+    opacity: 0.2 black;
+    border-bottom: 3px solid goldenrod;
+}
+#mEmpresa .mEmpresa__Articles_container {
+    display: flex;
+    width: 60%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.5% 2%;
+    border-left: 2px solid goldenrod;    
+    border-right: 2px solid goldenrod; 
+}
+
+#mEmpresa .mEmpresa__Articles_uno, #mEmpresa .mEmpresa__Articles_dos{
+    display: flex;
+    padding: 5% 0%;
+    border-top: 2px dotted goldenrod;
+    border-bottom: 2px dotted goldenrod;
+    p{
+        font-family: 'Mukta', sans-serif;
+        margin: 3%;
+        padding: 0% 5%;    
+    }
+    h2{
+        margin: 0% 2%;
+        font-size: 2.5rem;
+        border-bottom: 1px solid goldenrod;
+        font-family: 'Sansita Swashed', cursive;
+        color: #1c1c1c;
+        opacity: 0.93;    
+    }
+    figure, img, div{
+        width: 100%;
+    }
+}
+/*MAIN Empresa FIN*/
+/*---------------------------------------------------------------*/
+/*MAIN Tratamientos*/
+#mTratamientos .mTratamientos__Portada{
+    width: 100%;
+    background-image: url("../img/tratamientos.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    margin-top: 100px;   
+    opacity: 0.2 black;
+    border-bottom: 3px solid goldenrod;
+}
+#mTratamientos .mTratamientos__container {
+    display: flex;
+    width: 60%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5% 2%;
+    border-left: 2px solid goldenrod;    
+    border-right: 2px solid goldenrod;
+    h1{
+        margin: 3% 0% 5% 0%;
+        font-size: 50px;
+        border-bottom: 1px solid goldenrod;
+        font-family: 'Sansita Swashed', cursive;
+        color: #1c1c1c;
+        opacity: 0.93;    
+    }
+    h2{
+        font-family: 'Ruda', sans-serif;
+        opacity: 0.90;
+        text-align: center;
+        margin: 3% 0%;
+        padding-bottom: 1%;
+        border-bottom: 1px solid goldenrod;    
+    }
+    article{
+        width: 45%;
+        padding: 3% 3%;
+        margin: 1% 1%;    
+    }
+    p{
+        padding: 0% 3%;
+        font-family: 'Mukta', sans-serif;    
+    }
+    img{
+        width: 100%;
+        padding: 3%;
+        border: 1px dotted goldenrod;    
+    } 
+}
+.mTratamientos__Articles{
+    border: 1px solid goldenrod;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;    
+}
+#mTratamientos .mTratamientos__Articles_container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+/*MAIN Tratamientos FIN*/
+/******** MAINs-FIN *********/
+/*====================================================================================================================*/
+/*********** FOOTER ***********/
+footer{
+    background-image: url("../img/dark_mosaic.png");
+    display: flex;
+    justify-content: space-around;
+    border-top: goldenrod solid 3px;
+    grid-area: footer;
+}
+#footer .fSection{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 20px;    
+    width: 65%;
+    align-items: flex-start;
+    img{
+        width: 100%;    
+    }
+    ul{
+        list-style: none;
+        li{
+            a{
+                text-decoration: none;
+                font-family: 'Encode Sans SC', sans-serif;
+                :hover{
+                    text-decoration: none;
+                    border-bottom: 5px solid goldenrod;    
+                }    
+            }
+        }    
+    }
+}
+#footer .fRedes ul {    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    li{
+        padding: 10px 10px;
+        border-top: 1px solid goldenrod;    
+    }
+}
+#footer .fSection__uno{
+    width: 30%;
+    max-width: 30%;
+    padding: 2% 1% 0 0;
+}
+#footer .fSection__dos{
+    width: 52%;
+    max-width: 52%;
+    padding: 5% 2%;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    h2{
+        color: aliceblue;
+        opacity: 0.8;
+        text-align: center;
+        padding-bottom: 5px;    
+        border-bottom: 2px solid goldenrod;
+        font-family: 'Sansita Swashed', cursive;    
+    }
+    p{
+        color: aliceblue;
+        opacity: 0.9;
+        padding: 15px 5px 15px 5px;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;    
+    }    
+}
+#footer .fSection__tres{
+    width: 18%;
+    max-width: 18%;
+    padding: 5% 2%;
+    opacity: 0.8;
+    h3{
+        color: white;
+        border-bottom: goldenrod 1px solid;
+        font-family: 'Sansita Swashed', cursive;    
+    }
+    a{
+        color: aliceblue;    
+        padding: 10px 5px 0px 5px;    
+    }
+    ul{
+        border-left: 2px solid goldenrod;
+        padding-left: 5px ;
+        li{
+            margin-bottom: 10px;
+            letter-spacing: 0.1rem;
+            a{
+                :hover{
+                    color: goldenrod;
+                    text-decoration: none;
+                    border-bottom: 5px solid goldenrod;    
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;    
+                }
+            }    
+        }    
+    }
+}
+.redSocial{
+    width: 40px !important;
+    height: 40px;
+}
+.redSocial_F:hover{
+    background-color: #3b5998 ;
+}
+.redSocial_I:hover{
+    background-color: #ea2c59  ;
+}
+.redSocial_T:hover{
+    background-color: #00aced  ;
+}
+/********** FOOTER-FIN ***********/
+/*====================================================================================================================*/
+/* Transparencia tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

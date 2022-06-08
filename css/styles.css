@@ -212,7 +212,6 @@ body{
 header{
     
     background-image: url("../img/gplaypattern.png");
-    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -223,7 +222,6 @@ header{
     z-index: 99999;*/
     min-height: 100px;
     border-bottom: goldenrod solid 3px;
-    
     grid-area: header;
 }
 #header .header__Logo {
