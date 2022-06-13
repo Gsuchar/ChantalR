@@ -703,14 +703,15 @@ footer{
     width: 40px !important;
     height: 40px;
 }
-.redSocial_F:hover{
-    background-color: #3b5998 ;
-}
-.redSocial_I:hover{
-    background-color: #ea2c59  ;
-}
-.redSocial_T:hover{
-    background-color: #00aced  ;
+$redes:(/*Declaro Map de Redes Sociales hover*/
+    redSocial_F:#3b5998,
+    redSocial_I:#ea2c59,
+    redSocial_T:#00aced
+);
+@each $colorRedSoc, $colorRsHov in $redes {
+    .#{$colorRedSoc} :hover{
+        background-color: $colorRsHov;
+    }
 }
 /********** FOOTER-FIN ***********/
 /*====================================================================================================================*/

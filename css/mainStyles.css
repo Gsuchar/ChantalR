@@ -751,15 +751,15 @@ footer {
   height: 40px;
 }
 
-.redSocial_F:hover {
+.redSocial_F :hover {
   background-color: #3b5998;
 }
 
-.redSocial_I:hover {
+.redSocial_I :hover {
   background-color: #ea2c59;
 }
 
-.redSocial_T:hover {
+.redSocial_T :hover {
   background-color: #00aced;
 }
 
