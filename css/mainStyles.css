@@ -361,7 +361,7 @@ main {
 #main .mSection__dos button:hover {
   background-color: goldenrod;
 }
-#main .mSection__dos button:active {
+#main .mSection__dos button.active {
   background-color: goldenrod;
   color: whitesmoke;
 }
