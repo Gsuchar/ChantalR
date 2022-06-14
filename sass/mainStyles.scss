@@ -17,6 +17,16 @@ body{
     }
 /*---------------------------------------------------------------*/    
 /*********** MAINs MediaQuerys ***********/
+/*header mobile*/
+/*#header .header__nav{
+    &ul{
+        &li{
+            &a{
+                color:whitesmoke;
+            }
+        }
+    }
+}*/
 /*Index main*/ 
 .main__portada_text{
     h1 {
@@ -48,6 +58,9 @@ body{
     width: 100%;
     border: none !important;
     margin-bottom: 3%;
+    button{
+        width: 100%;
+    }
 }
 /*Fin Index main*/
 /*Tratamientos main*/
@@ -134,7 +147,9 @@ body{
     background-image: url("../img/gplaypattern.png");
 }
 .offcanvas-body{
-    padding: 0% !important;
+    /*padding: 0% !important;
+    background-color: gold;*/
+    
     ul{
         li{
             padding: 0rem 1rem;
