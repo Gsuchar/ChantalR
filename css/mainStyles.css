@@ -39,10 +39,10 @@ body {
   #main .mSection__dos {
     min-width: 95%;
   }
-  #main .mSection__dos :hover {
+  #main .mSection__dos:hover {
     width: 100%;
   }
-  #main .mSection__dos :active {
+  #main .mSection__dos:active {
     color: antiquewhite;
     width: 100%;
   }
@@ -160,7 +160,7 @@ body {
   font-family: "Encode Sans SC", sans-serif;
   font-weight: 500;
 }
-.offcanvas-body ul li a :hover {
+.offcanvas-body ul li a:hover {
   color: goldenrod;
   text-decoration: none;
   border-bottom: 5px solid goldenrod;
@@ -219,7 +219,7 @@ header {
   padding: 3px 3px 13px 3px;
   opacity: 0.9;
 }
-#header .header__nav ul li a :hover {
+#header .header__nav ul li a:hover {
   background-color: goldenrod;
   color: whitesmoke;
   font-family: "Encode Sans SC", sans-serif;
@@ -327,7 +327,7 @@ main {
   border-left: 1px solid #e9e9e9;
   letter-spacing: 0.1rem;
 }
-.mSection__uno_container_uno :hover, .mSection__uno_container_dos :hover, .mSection__uno_container_tres :hover {
+.mSection__uno_container_uno:hover, .mSection__uno_container_dos:hover, .mSection__uno_container_tres:hover {
   border-right: 1px solid goldenrod;
   border-bottom: 1px solid goldenrod;
   border-left: 1px solid goldenrod;
@@ -358,10 +358,10 @@ main {
   font-family: "Acme", sans-serif;
   opacity: 0.9;
 }
-#main .mSection__dos button :hover {
+#main .mSection__dos button:hover {
   background-color: goldenrod;
 }
-#main .mSection__dos button :active {
+#main .mSection__dos button:active {
   background-color: goldenrod;
   color: whitesmoke;
 }
@@ -669,7 +669,7 @@ footer {
   text-decoration: none;
   font-family: "Encode Sans SC", sans-serif;
 }
-#footer .fSection ul li a :hover {
+#footer .fSection ul li a:hover {
   text-decoration: none;
   border-bottom: 5px solid goldenrod;
 }
@@ -739,7 +739,7 @@ footer {
   margin-bottom: 10px;
   letter-spacing: 0.1rem;
 }
-#footer .fSection__tres ul li a :hover {
+#footer .fSection__tres ul li a:hover {
   color: goldenrod;
   text-decoration: none;
   border-bottom: 5px solid goldenrod;
