@@ -478,7 +478,7 @@ main {
   margin: 1% 0% 2% 0%;
   border: 1px solid goldenrod;
 }
-#mContacto .mContacto__Form-form input :focus-visible, #mContacto .mContacto__Form-form select :focus-visible {
+#mContacto .mContacto__Form-form input:focus-visible, #mContacto .mContacto__Form-form select:focus-visible {
   border: 3px solid goldenrod;
   outline: none;
 }
@@ -489,7 +489,7 @@ main {
   margin: 1% 0% 2% 0%;
   border: 1px solid goldenrod;
 }
-#mContacto .mContacto__Form-form textarea :focus-visible {
+#mContacto .mContacto__Form-form textarea:focus-visible {
   border: 3px solid goldenrod;
   outline: none;
 }
