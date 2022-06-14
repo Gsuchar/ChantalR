@@ -635,6 +635,7 @@ footer{
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding-left: 0%;
     li{
         padding: 10px 10px;
         border-top: 1px solid goldenrod;    
@@ -700,7 +701,7 @@ footer{
     }
 }
 .redSocial{
-    width: 40px !important;
+    width: 40px;
     height: 40px;
 }
 $redes:(/*Declaro Map de Redes Sociales hover*/
@@ -708,8 +709,9 @@ $redes:(/*Declaro Map de Redes Sociales hover*/
     redSocial_I:#ea2c59,
     redSocial_T:#00aced
 );
+
 @each $colorRedSoc, $colorRsHov in $redes {
-    .#{$colorRedSoc} :hover{
+    .#{$colorRedSoc}:hover{
         background-color: $colorRsHov;
     }
 }

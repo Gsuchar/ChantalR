@@ -515,7 +515,7 @@ main {
   font-weight: bold;
   opacity: 0.8;
 }
-#mContacto .mContacto__Form-form input[type=submit i] :hover {
+#mContacto .mContacto__Form-form input[type=submit i]:hover {
   background-color: goldenrod;
   color: white;
   border: 1px dotted black;
@@ -680,6 +680,7 @@ footer {
   justify-content: center;
   align-items: center;
   align-content: center;
+  padding-left: 0%;
 }
 #footer .fRedes ul li {
   padding: 10px 10px;
@@ -747,19 +748,19 @@ footer {
 }
 
 .redSocial {
-  width: 40px !important;
+  width: 40px;
   height: 40px;
 }
 
-.redSocial_F :hover {
+.redSocial_F:hover {
   background-color: #3b5998;
 }
 
-.redSocial_I :hover {
+.redSocial_I:hover {
   background-color: #ea2c59;
 }
 
-.redSocial_T :hover {
+.redSocial_T:hover {
   background-color: #00aced;
 }
 
