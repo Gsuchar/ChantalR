@@ -540,7 +540,11 @@ main{
         color: #1c1c1c;
         opacity: 0.93;    
     }
-    figure, img, div{
+    figure{
+        width: 100%;
+        padding-top: 3rem;
+    }
+     img, div{
         width: 100%;
     }
 }

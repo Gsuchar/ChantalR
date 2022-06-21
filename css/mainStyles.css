@@ -581,7 +581,11 @@ main {
   color: #1c1c1c;
   opacity: 0.93;
 }
-#mEmpresa .mEmpresa__Articles_uno figure, #mEmpresa .mEmpresa__Articles_uno img, #mEmpresa .mEmpresa__Articles_uno div, #mEmpresa .mEmpresa__Articles_dos figure, #mEmpresa .mEmpresa__Articles_dos img, #mEmpresa .mEmpresa__Articles_dos div {
+#mEmpresa .mEmpresa__Articles_uno figure, #mEmpresa .mEmpresa__Articles_dos figure {
+  width: 100%;
+  padding-top: 3rem;
+}
+#mEmpresa .mEmpresa__Articles_uno img, #mEmpresa .mEmpresa__Articles_uno div, #mEmpresa .mEmpresa__Articles_dos img, #mEmpresa .mEmpresa__Articles_dos div {
   width: 100%;
 }
 
