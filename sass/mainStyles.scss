@@ -333,7 +333,7 @@ main{
 #main .mSection__dos{
 /*defino ancho por el grid*/
     max-width: 70%;
-    width: 60%;
+    width: 70%;
     button{
         background-color: inherit;
         float: left;
@@ -410,7 +410,7 @@ main{
     border-bottom: 3px solid goldenrod;
 }
 .mContacto__Form{
-    width: 60%;
+    width: 70%;
 }
 #mContacto .mContacto__Form_container {
     display: flex;
@@ -513,7 +513,7 @@ main{
 }
 #mEmpresa .mEmpresa__Articles_container {
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
@@ -564,7 +564,7 @@ main{
 }
 #mTratamientos .mTratamientos__container {
     display: flex;
-    width: 60%;
+    width: 70%;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
@@ -629,7 +629,7 @@ footer{
     display: flex;
     flex-wrap: nowrap;
     padding-top: 20px;    
-    width: 65%;
+    width: 80%;
     align-items: flex-start;
     img{
         width: 100%;    
