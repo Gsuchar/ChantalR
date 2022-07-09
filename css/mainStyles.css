@@ -21,16 +21,6 @@ body {
 
   /*---------------------------------------------------------------*/
   /*********** MAINs MediaQuerys ***********/
-  /*header mobile*/
-  /*#header .header__nav{
-      &ul{
-          &li{
-              &a{
-                  color:whitesmoke;
-              }
-          }
-      }
-  }*/
   /*Index main*/
   .main__portada_text h1 {
     padding-top: 40%;
@@ -177,8 +167,6 @@ body {
 }
 
 .offcanvas-body {
-  /*padding: 0% !important;
-  background-color: gold;*/
   background-image: url("../img/xv.png");
 }
 .offcanvas-body ul li {
@@ -214,11 +202,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  /*padding: 20px 20px 10px 20px;*/
   align-items: center;
-  /*position: sticky;
-  top: 0;
-  z-index: 99999;*/
   min-height: 100px;
   border-bottom: goldenrod solid 3px;
   grid-area: header;
@@ -426,8 +410,6 @@ main {
   border-bottom: 2px solid goldenrod;
   margin: 2% 0%;
   display: flex;
-  /*flex-flow: row nowrap;
-  background-color: #f1f1f1;*/
   align-items: center;
 }
 
