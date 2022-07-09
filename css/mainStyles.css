@@ -141,6 +141,19 @@ body {
   /*Footer MediaQuerys FIN*/
   /*---------------------------------------------------------------*/
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .mSection__uno_container, .mSection__dos, .mTratamientos__container, .mEmpresa__Articles_container, .mContacto__Form {
+    width: 95% !important;
+  }
+
+  .fSection {
+    width: 90% !important;
+  }
+
+  .fSection__dos {
+    letter-spacing: 0.01rem !important;
+  }
+}
 /* MediaQuerys-FIN*/
 /*====================================================================================================================*/
 /* Css No Mobile*/
@@ -606,7 +619,7 @@ main {
 
 #mTratamientos .mTratamientos__container {
   display: flex;
-  width: 70%;
+  width: 80%;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
