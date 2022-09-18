@@ -7,6 +7,7 @@
 body{
     background-image: url("../img/xv.png");
 }
+
 /*====================================================================================================================*/
 /******** MediaQuerys ********/
 @media screen and (max-width: 767px) {
@@ -18,11 +19,13 @@ body{
 /*---------------------------------------------------------------*/    
 /*********** MAINs MediaQuerys ***********/
 /*Index main*/ 
-.main__portada_text{
+.main__portada_text_a{
+    
     h1 {
         padding-top: 40%;
     }
 }
+
 .mSection__uno_container {
     flex-flow: column nowrap;
     min-width: 100%;      
@@ -90,7 +93,21 @@ body{
 }
 /*Fin Contacto main*/
 /*Reserva main*/
-
+.contact_info_item {
+    width: 100%;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+//agregado para proyecto final js
+.restabLinks{
+    display: none;
+}
+.input_field{
+    width: 100% !important;
+    margin: 5px 2px;  
+}
 /*Fin Reserva main*/
 /*MAINs MediaQuerys FIN*/
 /*---------------------------------------------------------------*/
@@ -100,7 +117,8 @@ body{
     min-width: 95%;
 }
 .fSection__uno, .fSection__dos{
-    min-width: 100%;        
+    min-width: 100%;
+          
 }
 .fSection__tres{
     display: none;
@@ -115,7 +133,7 @@ body{
 /*---------------------------------------------------------------*/
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .mSection__uno_container, .mSection__dos, .mTratamientos__container, .mEmpresa__Articles_container, .mContacto__Form {
+    .main__portada_reservas, .mSection__uno_container, .mSection__dos, .mTratamientos__container, .mEmpresa__Articles_container, .mContacto__Form {
         width: 95% !important;
     }
     
@@ -146,7 +164,7 @@ body{
 /*FIN GRID-AREA*/
 /* BOOSTRAP HEADER_NAV*/
 .offcanvas-header {
-    border-bottom: goldenrod solid 3px;
+    border-bottom: #daa520 solid 3px;
 }
 #offcanvasNavbar{
     background-image: url("../img/gplaypattern.png");
@@ -240,7 +258,7 @@ main{
     grid-area: main;    
 }
 .PortadasEff{
-    div{/* Div efecto opaco en img de portadas*/
+    .PortadasEff_div{/* Div efecto opaco en img de portadas*/
         background-color: black;
         width: 100%;
         height: 100%;
@@ -268,15 +286,116 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);    
-    background-color: whitesmoke;
+    /*background-color: whitesmoke;*/
     color: black;
     border-radius: 10px;
+    
+    
+}
+.main__portada_text_a{
+    cursor: pointer;
     opacity: 0.4;
+    background-color: whitesmoke;
+    border-radius: 10px;
     h1{
         font-size: 5rem;
         font-family: 'Ruda', sans-serif;
     }
 }
+.main__portada_reservas{
+    /*defino ancho por el grid*/
+        /*max-width: 95%;
+        width: 75%;*/
+        opacity: 0.8;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        button{
+            background-color: inherit;
+            /*max-width: 80%;*/
+            position: center;
+            border: none;
+            /*outline: none;
+            cursor: pointer;*/
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            font-family: 'Acme', sans-serif;
+            opacity: 0.9;  
+            border: 1px solid goldenrod;
+            border:10px;
+            margin-top: 15px;
+            &:hover{
+                background-color: goldenrod;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+            &.active{
+                background-color: goldenrod;
+                color: whitesmoke;
+            }
+        }
+        h2{
+            margin: 2%;
+            font-size: 60px;
+            border-bottom: 1px solid goldenrod;
+            font-family: 'Sansita Swashed', cursive;
+            color: #1c1c1c;
+            opacity: 0.93;
+        }
+        h3{
+            border-bottom: 1px solid goldenrod;
+            padding: 5px;
+            /*width: 80%;*/
+            font-family: 'Ruda', sans-serif;    
+        }
+        p{
+            margin-top: 2%;
+            font-family: 'Mukta', sans-serif;
+            font-size: 20px;
+        }
+        .resBut{
+            width: 100%;
+        }
+        .resButNext{
+            width: 50%;
+            &:hover{
+                border-bottom-left-radius: 0px;
+            } 
+        }
+        .resButPrev{
+            width: 50%;
+            &:hover{
+                border-bottom-right-radius: 0px;
+            }                     
+        }
+        .restabLinks{
+            &:hover{
+                background-color: none !important;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                color: none;
+                cursor: not-allowed;
+            }
+        }  
+}
+
+.ButResNextPrev{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+#mensajeReserva_container{
+    text-align: left;
+}
+.main__portada_reservas_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+   
+}
+    
+
 #main .mSection__uno{
     display: flex;
     flex-wrap: nowrap;
@@ -743,3 +862,211 @@ $redes:(/*Declaro Map de Redes Sociales hover*/
     from {opacity: 0;}
     to {opacity: 1;}
   }
+
+
+
+
+::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    color: #fff;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+}
+
+.datepicker {
+    background-color: #000 !important;
+    color: #fff !important;
+    border: none;
+    padding: 10px !important;
+    max-width: 85%;
+    text-align: center;
+    align-content: center;
+}
+.datepicker-days{
+    text-align: center;
+}
+.datepicker-dropdown {
+   
+    &:after{
+        border-bottom: 6px solid #000;
+    };
+}
+
+thead tr:nth-child(3) th {
+    color: #fff !important;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.dow,
+.old-day,
+.day,
+.new-day {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 0px !important;
+}
+
+.old-day,
+.day,
+.new-day,
+.month,
+.year,
+.decade,
+.century{
+    &:hover {
+        border-radius: 6px !important;
+        background-color: #eee;
+        color: #000;
+    };
+}
+
+/*.active {
+    border-radius: 6px !important;
+    background-image: linear-gradient(#90CAF9, #64B5F6) !important;
+    color: #000 !important;
+}*/
+
+.disabled {
+    color: #616161 !important;
+}
+
+.prev,
+.next,
+.datepicker-switch {
+    border-radius: 0 !important;
+    padding: 20px 10px !important;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff !important;
+    opacity: 0.8;
+}
+
+.prev,
+.next,
+.datepicker-switch{
+    &:hover {
+        background-color: inherit !important;
+        opacity: 1;
+    }
+}
+
+.cell {
+    border: 1px solid #BDBDBD;
+    margin: 2px;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid goldenrod
+    };
+    &.select {
+        background-color: goldenrod;
+        color: #fff;
+    };
+}
+
+
+
+
+
+.fa-calendar {
+    color: #fff;
+    font-size: 30px;
+    padding-top: 8px;
+    padding-left: 5px;
+    cursor: pointer;
+    max-width: 5%;
+    
+}
+
+.resv_form_inputs {
+    margin-bottom: 15px
+}
+
+.input_field {
+    width: calc((100% - 60px) / 3);
+    height: 50px;
+    padding-left: 25px;
+    border: solid 1px goldenrod;
+    border-radius: 5px;
+    outline: none;
+    color: goldenrod;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.input_field,.text_field{
+    &:focus {
+        box-shadow: 1px 3px rgba(218, 165, 32, 0.575) ;
+        border: 3px solid goldenrod;
+    }
+}
+
+
+.input_field::-webkit-input-placeholder,
+.text_field::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field:-moz-placeholder,
+.text_field:-moz-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field::-moz-placeholder,
+.text_field::-moz-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field:-ms-input-placeholder,
+.text_field:-ms-input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input_field::input-placeholder,
+.text_field::input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.text_field {
+    width: 100%;
+    height: 160px;
+    padding-left: 25px;
+    padding-top: 15px;
+    border: solid 1px goldenrod;
+    border-radius: 5px;
+    color: goldenrod;
+    outline: none;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}

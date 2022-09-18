@@ -1,0 +1,87 @@
+{
+    "tratamientos": [
+
+        {
+            "id": 1,
+            "nombre": "Tratamiento Facial",
+            "descripcion": "Tratamiento Facial"
+        },
+        {
+            "id": 2,
+            "nombre": "Tratamiento Corporal",
+            "descripcion": "Tratamiento Corporal"
+        },
+        {
+            "id": 3,
+            "nombre": "Otros Tratamientos",
+            "descripcion": "Otros Tratamientos"
+        },        
+        {
+            "id": 4,
+            "nombre": "Medicina Estetica",
+            "descripcion": "Medicina Estetica"
+        },
+        {
+            "id": 5,
+            "nombre": "Masajes",
+            "descripcion": "Masajes"
+        },
+        {
+            "id": 6,
+            "nombre": "Depilacion",
+            "descripcion": "Depilacion"
+        }
+        
+    ],
+    "horas": [
+
+        {
+            "id": 9,
+            "hora": "09:00 AM"
+            
+        },
+        {
+            "id": 10,
+            "hora": "10:00 AM"
+            
+        },
+        {
+            "id": 11,
+            "hora": "11:00 AM"
+            
+        },
+        {
+            "id": 12,
+            "hora": "12:00 PM"
+            
+        },
+        {
+            "id": 13,
+            "hora": "13:00 PM"
+            
+        },
+        {
+            "id": 14,
+            "hora": "14:00 PM"
+            
+        },
+        {
+            "id": 15,
+            "hora": "15:00 PM"
+            
+        },
+        {
+            "id": 16,
+            "hora": "16:00 PM"
+            
+        },
+        {
+            "id": 17,
+            "hora": "17:00 PM"
+            
+        }        
+        
+    ]
+
+
+}

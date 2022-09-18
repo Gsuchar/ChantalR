@@ -19,8 +19,12 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <!--Libreria SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>   
+
+    
 </head>
-<body>
+<body  onblur="fechaResCliente();"><!--onblur en body para que ejecute funcion js al perder focus con datepicker-->
     <div class="grid-area-conteiner">
         <header id="header" class="fixed-top">
             <!--Nav mobile-->
@@ -53,8 +57,8 @@
                             <a class="nav-link" href="empresa.html">Empresa</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="reservas.html">Reservas</a>
-                            </li>
+                                <a class="nav-link" href="index.html">Reservas</a>
+                            </li>                            
                             <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
                             </li>
@@ -80,8 +84,8 @@
                         <a href="empresa.html">Empresa</a>
                     </li>
                     <li>
-                        <a href="reservas.html">Reservas</a>
-                    </li>
+                        <a href="index.html#main">Reservas</a>
+                    </li>                    
                     <li>
                         <a href="contacto.html">Contacto</a>
                     </li>                
@@ -91,11 +95,76 @@
         </header>
         <main id="main">
             <section class="main__portada PortadasEff" >
-                <div></div>                
+                <div class="PortadasEff_div"></div>                
                 <article class="main__portada_text">
-                    <h1>Date el gusto de sentirte mejor!</h1>
-                    <h3>Haz tu reserva ahora</h3>
-                    <!--<button>Reserve</button>-->
+                    <div id="resPort_Ini" class="main__portada_text_a" onclick="hide_show('resPort_Ini', 'resPort_Steps',true)" >
+                        <h1>Date el gusto de sentirte mejor!</h1>
+                        <h3 id ="resPortStart" >Haz tu reserva ahora</h3>                        
+                    </div>
+                    <!--ReservasPortada-->
+                    <section id="resPort_Steps" class="main__portada_reservas" style="display: none;">
+                        <!--Seccion de pestañas -->
+                        <div class="main__portada_reservas_container">
+                            <h2>Reservas</h2>
+                            <div id="pestañas"class="pestañas">
+                                <button id="res1" class="restabLinks">Seleccione Tratamiento</button>
+                                <button id="res2" class="restabLinks">Seleccione Dia y Hora</button>
+                                <button id="res3" class="restabLinks">Datos Cliente</button>
+                                <button id="res4" class="restabLinks">Confirmacion Reserva</button>                
+                            </div>
+                            <div id="reservStep1" class="restabDatos" style="display: block;" >
+                                <div id= "divTrat" class="row text-center mx-0">
+                                    <!--CARGA DE DATOS POR JSON-->                                                                        
+                                
+                                </div>
+                                <button onclick="hide_show('reservStep1', 'reservStep2',true)" class="resBut">Siguiente</button>
+                                
+                            </div>        
+                            <div id="reservStep2" class="restabDatos" style="display: none;">                                
+                                <article> 
+                                    <div>
+                                        <div class="mx-0 mb-0 row justify-content-sm-center justify-content-start px-1">
+                                            <input type="text" id="dp1" class="datepicker" placeholder="¿Que dia deseas?" name="date"  readonly>
+                                            <span class="fa fa-calendar"></span> 
+                                        </div>
+                                    </div>                                    
+                                    <div id= "divHoras" class="row text-center mx-0">
+                                        <!--CARGA DE DATOS POR JSON-->                                                                                                                 
+                                    </div>
+                                    <div class="ButResNextPrev">
+                                        <button onclick="hide_show('reservStep2', 'reservStep1', false)" class="resButPrev">Anterior</button>
+                                        <button  onclick="hide_show('reservStep2', 'reservStep3', true)" class="resButNext" >Siguiente</button> 
+                                    </div>                                    
+                                </article>
+                            </div>
+        
+                            <div id="reservStep3" class="restabDatos" style="display: none;">
+                                <h3>Complete sus datos</h3>
+                                <div class="row text-center mx-0">
+                                    <div class="resv_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
+                                        <input type="text" id="resv_form_nombre" class="input_field" placeholder="Nombre" required="required" data-error="Ingresa tu Nombre.">
+                                        <input type="email" id="resv_form_email" class="input_field" placeholder="E-mail" required="required" data-error="Ingresa tu E-mail.">
+                                        <input type="tel" id="resv_form_tel" class="input_field" placeholder="Telefono" required="required" data-error="Ingresa tu E-mail.">
+                                    </div>
+                                    <div>
+                                        <textarea id="resv_form_men" class="text_field" name="message" rows="4" placeholder="Notas"></textarea>
+                                    </div>                                    
+                                </div>
+                                <div class="ButResNextPrev">
+                                    <button onclick="hide_show('reservStep3', 'reservStep2', false)" class="resButPrev">Anterior</button>
+                                    <button  onclick="hide_show('reservStep3', 'reservStep4')" class="resButton resButNext">Finalizar</button> 
+                                </div> 
+                            </div>
+                            <div id="reservStep4" class="restabDatos" style="display: none;">
+                                <h3>Reserva exitosa</h3>
+                                <div class="row text-center mx-0">                                    
+                                    <div id="mensajeReserva_container">
+                                        
+                                    </div><!--CONTENEDOR DATOS POR JS CONFIRMAR RESERVA-->                                  
+                                </div>                                
+                            </div>
+                        </div>
+                    </section>
                 </article>
             </section>
             <section class="mSection__uno">
@@ -187,32 +256,23 @@
                             <a href="empresa.html">Empresa</a>
                         </li>
                         <li>
-                            <a href="reservas.html">Reservas</a>
+                            <a href="#main">Reservas</a>
                         </li>
                         <li>
                             <a href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>                
-            </section>
+            </section>            
             <script>
-                function openTab(evt, tabText) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabDatos");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tabLinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(tabText).style.display = "block";
-                evt.currentTarget.className += " active";
-                }
-                </script>
-                <script>
-                    AOS.init();
-                </script>
+                AOS.init();
+            </script>
+            <script src="js/jquery.min.js"></script>
+            <!-- <script src="js/js.js"></script>-->
+            <script src="js/main.js"></script>
+            <script src="js/reservas.js"></script>
+            <script src="js/gestionDatos.js"></script>
+            <script src="js/bootstrap-datepicker.js"></script>
         </footer>
     </div>    
 </body>
